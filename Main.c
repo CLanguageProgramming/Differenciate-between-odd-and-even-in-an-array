@@ -6,49 +6,46 @@ o/p: {10,20,12}
 #include <stdio.h>
 int main()
 {
+    int get;
+    int i;
     int a[100];
-    int i=0;
-    int even[100];
     int eve=0;
-    int odd[100];
     int od=0;
-    for(int i=0; i<10;i++)
+    int odd[100];
+    int even[100];
+    printf("Enter the number of times you want to enter:-> ");
+    scanf("%d", &get);
+    for(i=0;i<get;i++)
     {
-        printf("Enter a Number:- ");
+        printf("Enter a number >> ");
         scanf("%d", &a[i]);
     }
-    printf("Numbers entered:->\t");
-    for(int b=0;b<10;b++)
+    printf("You have entered:-> ");
+    for(i=0;i<get;i++)
     {
-        printf("%d\t", a[b]);
+        printf("%d,", a[i]);
     }
-    for(int b=0;b<10;b++)
+    for(i=0;i<get;i++)
     {
-        if(a[b]%2==0)
+        if(a[i]%2==0)
         {
-            for(;i<i+ 1;i++)
-            {
-                even[i] = a[b];
-                eve++;
-            }
+            even[eve] = a[i];
+            eve++;
         }
         else
         {
-         for(;i<i+ 1;i++)
-            {
-                odd[i] = a[b];
-                od++;
-            }
+            odd[od] = a[i];
+            od++;
         }
     }
-    printf("Even Numbers:-\t");
-    for(int i=0;i<eve;i++)
+    printf("\nOdd:-> ");
+    for(i=0;i<=od;i++)
     {
-        printf("%d\t", even[i]);
+        printf("%d,", odd[od]);
     }
-    printf("\nOdd Numbers:-\t");
-    for(int i=0;i<od;i++)
+    printf("\nEven:-> ");
+    for(i=0;i<=eve;i++)
     {
-        printf("%d\t", odd[i]);
+        printf("%d,", even[eve]);
     }
 }
