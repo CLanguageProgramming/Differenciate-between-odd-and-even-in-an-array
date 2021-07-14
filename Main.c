@@ -39,13 +39,13 @@ int main()
         }
     }
     printf("\nOdd:-> ");
-    for(i=0;i<=od;i++)
+    for(i=0;i<od;i++)
     {
-        printf("%d,", odd[od]);
+        printf("%d,", odd[i]);
     }
     printf("\nEven:-> ");
-    for(i=0;i<=eve;i++)
+    for(i=0;i<eve;i++)
     {
-        printf("%d,", even[eve]);
+        printf("%d,", even[i]);
     }
 }
